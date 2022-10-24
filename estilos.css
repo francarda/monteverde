@@ -1,3 +1,9 @@
+*{
+    text-decoration: none;
+    margin:0;
+
+}
+
 div.encabezado{
     display: flex;
    
@@ -11,7 +17,10 @@ div.encabezado{
     background-size:cover;
 }
 body{
-    background-color: darkgreen;
+    background-color: #fefefe;
+}
+div.bienvenidos{
+    font-size: 85px;
 }
 div.dentro{
     margin: 0.5%;
@@ -23,33 +32,119 @@ div.dentro{
     background-color: white;
     opacity: 0.5;
 }
-div.derecha{
-    flex-direction: column;
-    flex-wrap: nowrap;
-    margin:0.5%;
+
+p{
+    text-align:right;
+   align-items: flex-end;
+    margin: 2%;
+    font-size: 32px;
+}
+div.botonera{
+    text-align: center;
+    padding: 0px 20px;
     display: flex;
-    height: 200px;
-    width: 200px;
-    align-self: flex-start;
-    align-content: flex-start;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    width: auto;
+    height: 50px;
+    background-color: green;
+    opacity: 0.5;
+    flex-wrap: wrap;
+    
+}
+div > ul{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /*justify-content:space-around;*/
+ 
+    
+
+}
+div > ul > li{
+   
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-color: black;
+    text-transform: uppercase;
+    
+}
+div > ul > li > a{
+    width: 100%;
+    display: flex;
+    color: black;
+    opacity: 1,5;
+    z-index: 12;
+ 
+
+    /*position: absolute;
+
+  left:50%;
+    top:50%;*/
+   justify-content: center;
+    align-items: center;
+    text-align: right; 
+    transition: all 300ms ease;
+    padding: 0px 14px;
+}
+div > ul > li> a:hover{
+  
+    transform: scale(1.8);
+    color:red;
+    background-color: white;
+    text-align: center;
+
+    align-items: reverse;
+}
+div.cuerpo{
+ border: solid black;
+    width: 90%;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+ margin: 20px 20px;
+ display: flex;
+ 
+}
+div.derecha{
+ 
+    display: flex;
+    width: 300px;
+   height: 300px;
+   
     background-color: blue;
     background-image: url("logo.jpg");
     background-size: cover;
     background-position: center;
 }
-p{
-    text-align:right;
-   align-items: flex-end;
-    margin: 2%;
+div.imagen_cuerpo{
+    width: 30%;
+    height: 100px;
+    border:solid black;
 }
-.emma{
-    font-size: xx-large;
+div.mision{
+   
+   border-bottom-left-radius: 20%;
+    border: solid green;
+    padding: 1%;
+   
+    width: 40%;
+    height: auto;
+    text-align: center;
+    
 }
-/*
-</div>
-    <p class="emma"> EMMA es la niña mas hermosa del mundo</p>
-    <p class="emma">LUCIA EMMA Y BRINCOLINA</p>
-    <img src="emma.jpg" alt="Emmita es la mas bella" width="500">
+ footer {
+    display:flex;
+    align-items: space-between;
 
-</body>
-</html>
+}
+.otro{
+    width: 50%;
+    height: 300px;
+border: solid black;
+
+}
