@@ -15,7 +15,7 @@ div.encabezado{
     text-shadow:
    -1px -1px 0 #fff;
     display: flex;
-   align-items: flex-end;
+    align-items: flex-end;
     justify-content: center;
     flex-wrap: wrap;
  
@@ -23,7 +23,7 @@ div.encabezado{
   
     background-color: powderblue;
     background-image: url("recursos/recorte.png");
-    background-size:cover;
+    background-size: cover;
 }
 body{
     background-color: #fefefe;
