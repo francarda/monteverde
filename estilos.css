@@ -83,6 +83,7 @@ div > ul > li{
 div > ul > li > a{
     font-family: 'Architects Daughter', "cursive";
     width: 100%;
+    height: 100%;
     display: flex;
     color: black;
     opacity: 1,5;
@@ -110,7 +111,7 @@ div > ul > li> a:hover{
 }
 div.cuerpo{
 
-    width: 90%;
+    width: auto;
     justify-content: space-around;
     align-items: center;
     height: auto;
@@ -153,7 +154,7 @@ div.mision{
 .paracarru{
     margin-top: 40px;
     padding: 40px;
-    width: 100%;
+    width: auto;
 
     display: flex;
     justify-content: center;
@@ -183,8 +184,8 @@ div.txtContacto{
     /*flex-direction: column;*/
     height: 200px;
     width: 100%;
-    background-color: white;
-    opacity: 0.5;
+    background-color: rgba(255, 255, 255 , 0.4);
+
 }
 /*.otro{
     width: 50%;
@@ -199,4 +200,36 @@ border: solid black;
     background-image: url("recursos/fondo pie.png");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+@media screen and (max-width: 720px){
+    div.encabezado{
+        height: 300px;
+    }
+    img.hola{
+        display: none;
+            }
+  div.botonera{
+    background-color: transparent;
+  }
+    div.botonera > ul{
+       flex-direction: column;
+    margin: none;
+    background: none;
+    }
+div.cuerpo{
+    justify-content: center;
+    
+}
+div.mision{
+    width: 100%;
+}
+footer {
+    height: auto;
+}
+div.txtContacto p{
+    font-size: 18px;}
+    div > ul > li> a{
+        background-color: rgba(0, 100, 0, 0.5);
+    }
 }
