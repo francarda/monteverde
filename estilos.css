@@ -141,15 +141,17 @@ div.imagen_cuerpo{
 div.mision{
     padding:10px;
     font-family: 'Architects Daughter', "cursive";
-   border-bottom-left-radius: 20%;
-   background-color: rgba(182, 243, 182, 0.767);
+   border-radius: 20px;
+   background-color: rgba(212, 243, 212, 0.767);
     border: solid green;
     padding: 1%;
    
     width: 40%;
     height: auto;
     text-align: center;
-    
+    /*-webkit-text-stroke: 1px rgb(0,0,0);*/
+    text-shadow: 0 0 5px white;
+    color:green;
 }
 .paracarru{
     margin-top: 40px;
@@ -202,7 +204,57 @@ border: solid black;
     background-size: cover;
 }
 
-@media screen and (max-width: 720px){
+form{
+    position: relative;
+    left: 10%;
+    display: flex;
+    margin: center;
+    flex-direction: column;
+    align-items:baseline;
+    background-color: burlywood;
+    width: 80%;
+    margin-top: 40px;
+    color:rgba(0, 100, 0, 0.5);
+    font-size: 35px;
+}
+@media screen and (max-device-width:800px) {
+    *{font-size: 24px;}
+    div.encabezado{
+        height: 300px;
+    }
+    img.hola{
+        display: none;
+            }
+  div.botonera{
+    background-color: transparent;
+  }
+    div.botonera > ul{
+       flex-direction: column;
+    margin: none;
+    background: none;
+    }
+div.cuerpo{
+    justify-content: center;
+    margin-top: 100px;
+    
+}
+div.mision{
+    width: 100%;
+}
+footer {
+    height: auto;
+}
+div.txtContacto p{
+    font-size: 24px;}
+    div > ul > li> a{
+        background-color: rgba(0, 100, 0, 0.5);
+    }
+}
+
+
+@media screen and (max-width: 720px) 
+
+{
     div.encabezado{
         height: 300px;
     }

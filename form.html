@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <title>Contacto</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+
+<body>
+<div class="encabezado"> 
+    
+    <div class="bienvenidos">Contacto</div>
+
+</div>
+<div class="botonera"> 
+    <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="#">articulo</a></li>
+        <li><a href="#">galeria de fotos</a></li>
+        <li><a href="form.html">contacto</a></li>
+    
+    </ul>
+</div>
+<form accion="formulario" method="GET o POST">
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name= "nombre" placeholder="Nombre"  />
+<!---email, passwor, file, radio, checkbox, value es para pasar un valor por defecto-->
+    <br>
+    <label for="apellido">Apellido</label>
+    <input value="Apellido" type="text" id="apellido" name = "apellido" placeholder="Apellido">
+    <br>
+    <label for="ciudad">Ciudad</label>
+    <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad en la que se encuentra el terreno">
+    <br>
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="email" placeholder="Correo electronico"/>
+    <br>
+    <label for="comentario">Comentario</label>
+    <textarea name="comentario" id="comentario" cols="50" rows="10"></textarea>
+    <br>
+    <input type="submit"/>
+    <!--buttom, submit reset, se puede agregar etiquetas-->
+    <button type="button">Enviar<img></button>
+    <button type="reset"> Limpar Formulario</button>
+</form>
+
+
+</div>
+
+
+</body>
+</html>
