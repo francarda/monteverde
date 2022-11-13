@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contenedor">
+      
+        <form  method="post" onsubmit="return validar()">
+            
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name= "nombre" placeholder="Nombre"><br><br>
+            
+            <label for="mensaje"> Mensaje</label> 
+
+            <textarea id="mensaje" name="mensaje" placeholder="Mensaje"></textarea>
+            <button type="reset" onclick="limpiar">limpar</button>
+            <button type="submit" onclick="mensaje"> enviar</button>
+   <!---ul y la dt--->
+        </form>
+        <ul id="lista">
+
+        </ul>
+        <ol id="correctos">
+
+        </ol>
+    </div>
+    <ul id="lista">
+
+    </ul>
+    <!---.trim te saca los espacios en blancos-->
+    <script type="text/javascript">
+       
+       
+        function validar(){
+            let nombre= document.getElementById("nombre");
+            let texto = document.getElementById("mensaje");
+            let errores= document.getElementById("lista");
+            
+            if(nombre.value ==""){
+            //alert("Uno de los campos esta vacio");}
+            let errori = document.createElement("li");
+            errores.appendChild(errori);
+            errori.innerHTML="Campo nombre vacio";
+            }
+            if(texto.value== "" || texto.length>200){
+
+            //alert("Error en campo de texto");
+            let error = document.createElement("li");
+            errores.appendChild(error);
+            error.innerHTML="Error campo de texto"
+            }
+            return false;
+        }
+
+        function limpiar(){
+            document.getElementById("nombre")="";
+            document.getElementById("mensaje")="";
+        }
+        function mensaje(){
+            let mensajes =document.createElement("li");
+            let nombre= document.getElementById("nombre").value;
+            let texto = document.getElementById("mensaje").value;
+            mensajes.innerHTML= "Nombre : " + nombre + " dice: "+ texto;
+            document.getElementById("lista").appendChild(mensajes);
+            
+        }
+       </script>
+</body>
+</html>

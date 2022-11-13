@@ -217,21 +217,68 @@ form{
     color:rgba(0, 100, 0, 0.5);
     font-size: 35px;
 }
+.iconMenu{
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    width: 26px;
+    height: 100%;
+    display: none;
+    align-items: center;
+
+}
+#labelcheck{
+    width: 26px;
+    height: 100%;
+    display: none;
+}
+#checkMenu{
+    display: none;
+}
 @media screen and (max-device-width:800px) {
     *{font-size: 24px;}
+    #labelcheck{
+        align-self: center center;
+        width: 100%;
+        display:flex;
+    }
+    .iconMenu{
+        font-size: 30px;
+        background-color: rgba(0, 100, 0, 0.5);
+        width: 100%;
+        color:white;
+        display: flex;
+    }
     div.encabezado{
-        height: 300px;
+        height: 50vh;
+     display: flex;
+        align-items:center;
+      
+    }
+    div.bienvenidos{
+        margin: 0  50px 50px;
+          align-self: center;
+          font-size: 130px;
+ 
+       
     }
     img.hola{
         display: none;
             }
-  div.botonera{
+    div.botonera{
+  
+    margin: none;
+    width: 100%;
     background-color: transparent;
   }
     div.botonera > ul{
-       flex-direction: column;
+    flex-direction: column;
     margin: none;
     background: none;
+    }
+
+    div.botonera > ul > li{
+        margin: none;
     }
 div.cuerpo{
     justify-content: center;
@@ -242,6 +289,7 @@ div.mision{
     width: 100%;
 }
 footer {
+
     height: auto;
 }
 div.txtContacto p{
