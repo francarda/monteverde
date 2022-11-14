@@ -25,6 +25,10 @@ div.encabezado{
     background-image: url("recursos/recorte.png");
     background-size: cover;
 }
+div.encabezado.distinto{
+    height: 100px;
+  
+}
 body{
     background-color: #fefefe;
 }
@@ -215,7 +219,13 @@ form{
     width: 80%;
     margin-top: 40px;
     color:rgba(0, 100, 0, 0.5);
-    font-size: 35px;
+    font-size: 20px;
+}
+div.delform{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 .iconMenu{
     font-size: 26px;
@@ -234,6 +244,12 @@ form{
 }
 #checkMenu{
     display: none;
+}
+.error{
+    border-color:red;
+    /*background-color: red;
+*/
+
 }
 @media screen and (max-device-width:800px) {
     *{font-size: 24px;}
@@ -260,8 +276,9 @@ form{
           align-self: center;
           font-size: 130px;
  
-       
+    
     }
+   
     img.hola{
         display: none;
             }

@@ -24,22 +24,38 @@
 </div>
 <div id="form1">
 <form id= "form" accion="formulario" method="post" onsubmit= "return validar()">
-    <label for="nombre">Nombre</label>
-    <input type="text" id="nombre" name= "nombre" placeholder="Nombre"  />
+    <div class="delform">
+        <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name= "nombre" placeholder="Nombre"  />
+            <br>
+            
+        </div>
+        <div>
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name = "apellido" placeholder="Apellido">
+            <br>
+
+        </div>
+    </div>
 <!---email, passwor, file, radio, checkbox, value es para pasar un valor por defecto-->
-    <br>
-    <label for="apellido">Apellido</label>
-    <input type="text" id="apellido" name = "apellido" placeholder="Apellido">
-    <br>
-    <label for="ciudad">Ciudad</label>
-    <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad en la que se encuentra el terreno">
-    <br>
-    <label for="email">E-mail</label>
-    <input type="email" id="email" name="email" placeholder="Correo electronico"/>
-    <br>
+<div class="delform">
+    <div><label for="ciudad">Ciudad</label>
+        <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad en la que se encuentra el terreno">
+        <br></div>
+       <div>
+
+           <label for="email">E-mail</label>
+           <input type="email" id="email" name="email" placeholder="Correo electronico"/>
+           <br>
+        </div>
+   </div>
+   <div>
+    
     <label for="comentario">Comentario</label>
     <textarea name="comentario" id="comentario" cols="50" rows="10"></textarea>
     <br>
+</div>
     <input type="submit"/>
     <!--buttom, submit reset, se puede agregar etiquetas-->
     
@@ -51,6 +67,7 @@
 <script type="text/javascript">
    function validar(){
         let flag=true;
+       
         let errores = document.getElementById("errores");
         errores.innerHTML= "";
         let nombre= document.getElementById("nombre");
@@ -59,38 +76,48 @@
         let email= document.getElementById("email");
         let comentario= document.getElementById("comentario");
         let patron = /^\w+@\w+(\.\w{2,4})+$/;
+       
+        let nodo= document.querySelectorAll("input");
+        for (let i = 0; i < nodo.length; i++) {
+       nodo[i].classList.remove("error");
+        }  
         
         
         if(nombre.value == ""){
         let error = document.createElement("li");
         errores.appendChild(error);
         error.innerHTML="Debe ingresar un nombre";
+        let list= nombre.classList;
+        list.add("error");
         }
         if (apellido.value == ""){
             let error= document.createElement("li");
             errores.appendChild(error);
             error.innerHTML="Debe ingresar un apellido";
             flag=false;
-
+            apellido.classList.add("error");
         }
         if (ciudad.value==""){
             let error= document.createElement("li");
             errores.appendChild(error);
             error.innerHTML= "Debe ingresar una ciudad";
             flag=false;
+            ciudad.classList.add("error");
         }
         if (!patron.test(email.value)){
             let error= document.createElement("li");
             errores.appendChild(error);
             error.innerHTML="Debe ingresar un e-mailvalido";
             flag=false;
+            email.classList.add("error");
 
         }
-        if (comentario.value= ""){
+        if (comentario.value== ""){
             let error= document.createElement("li");
             errores.appendChild(error);
             error.innerHTML="Debe ingresar un comentario";
             flag=false;
+            comentario.classList.add("error");
         }
         if (flag){
         let hoala= document.getElementById("form1");
