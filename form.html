@@ -8,7 +8,7 @@
 
 
 <body>
-<div class="encabezado distinto"> 
+<div class="encabezado"> 
     
     <div class="bienvenidos">Contacto</div>
 
@@ -22,14 +22,13 @@
     
     </ul>
 </div>
-<div id="form1">
-<form id= "form" accion="formulario" method="post" onsubmit= "return validar()">
+<form accion="formulario" method="GET o POST">
     <label for="nombre">Nombre</label>
     <input type="text" id="nombre" name= "nombre" placeholder="Nombre"  />
 <!---email, passwor, file, radio, checkbox, value es para pasar un valor por defecto-->
     <br>
     <label for="apellido">Apellido</label>
-    <input type="text" id="apellido" name = "apellido" placeholder="Apellido">
+    <input value="Apellido" type="text" id="apellido" name = "apellido" placeholder="Apellido">
     <br>
     <label for="ciudad">Ciudad</label>
     <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad en la que se encuentra el terreno">
@@ -42,67 +41,12 @@
     <br>
     <input type="submit"/>
     <!--buttom, submit reset, se puede agregar etiquetas-->
-    
+    <button type="button">Enviar<img></button>
     <button type="reset"> Limpar Formulario</button>
 </form>
+
+
 </div>
-<ul id="errores">
-    </ul>
-<script type="text/javascript">
-   function validar(){
-        let flag=true;
-        let errores = document.getElementById("errores");
-        errores.innerHTML= "";
-        let nombre= document.getElementById("nombre");
-        let apellido= document.getElementById("apellido");
-        let ciudad= document.getElementById("ciudad");
-        let email= document.getElementById("email");
-        let comentario= document.getElementById("comentario");
-        let patron = /^\w+@\w+(\.\w{2,4})+$/;
-        
-        
-        if(nombre.value == ""){
-        let error = document.createElement("li");
-        errores.appendChild(error);
-        error.innerHTML="Debe ingresar un nombre";
-        }
-        if (apellido.value == ""){
-            let error= document.createElement("li");
-            errores.appendChild(error);
-            error.innerHTML="Debe ingresar un apellido";
-            flag=false;
-
-        }
-        if (ciudad.value==""){
-            let error= document.createElement("li");
-            errores.appendChild(error);
-            error.innerHTML= "Debe ingresar una ciudad";
-            flag=false;
-        }
-        if (!patron.test(email.value)){
-            let error= document.createElement("li");
-            errores.appendChild(error);
-            error.innerHTML="Debe ingresar un e-mailvalido";
-            flag=false;
-
-        }
-        if (comentario.value= ""){
-            let error= document.createElement("li");
-            errores.appendChild(error);
-            error.innerHTML="Debe ingresar un comentario";
-            flag=false;
-        }
-        if (flag){
-        let hoala= document.getElementById("form1");
-        hoala.innerHTML="";
-        }
-        let mensaje = document.createElement("li");
-        errores.appendChild(mensaje);
-        mensaje.innerHTML="su mensaje ha sido enviado<br>Los datos enviados fueror<li>nombre:"
-    return false;
-    }
-
-</script>
 
 
 </body>
