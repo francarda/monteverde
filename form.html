@@ -81,7 +81,7 @@
         for (let i = 0; i < nodo.length; i++) {
        nodo[i].classList.remove("error");
         }  
-        
+        comentario.classList.remove("error")
         
         if(nombre.value == ""){
         let error = document.createElement("li");
@@ -123,9 +123,9 @@
         let hoala= document.getElementById("form1");
         hoala.innerHTML="";
         }
-        let mensaje = document.createElement("li");
+        /*let mensaje = document.createElement("li");
         errores.appendChild(mensaje);
-        mensaje.innerHTML="su mensaje ha sido enviado<br>Los datos enviados fueror<li>nombre:"
+        mensaje.innerHTML="su mensaje ha sido enviado<br>Los datos enviados fueror<li>nombre:"*/
     return false;
     }
 

@@ -47,7 +47,13 @@
 <div class="final">
 <div class="paracarru">
 
-    <div class="carrusel"></div>
+    <div id="carrusel" class="carrusel">
+        
+    </div>
+    <div class="botones">
+        <button id="atras">Atras</button>
+        <button id="siguiente">Siguiente</button>
+    </div>
 </div>
     <footer>
 
@@ -61,5 +67,16 @@
         </div>
     </footer>
 </div>
+<script type="text/javascript">
+   let arreglo=[
+    ("recuros/imagen1"),
+    ("recursos/imgen2"),
+    ("recursos/imagen3"),
+];
+   let carrusel= document.getElementById("carrusel");
+   carrusel.style.backgroundImage= arreglo[2];
+   
+
+</script>
 </body>
 </html>
