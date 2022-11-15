@@ -46,13 +46,11 @@
 </div>
 <div class="final">
 <div class="paracarru">
-
-    <div id="carrusel" class="carrusel">
-        
-    </div>
+        <img id="fotos" class="carrusel" src="recursos/imagen1.jpg">
+    
     <div class="botones">
-        <button id="atras">Atras</button>
-        <button id="siguiente">Siguiente</button>
+        <button id="atras" onclick="atras()">Atras</button>
+        <button type="button" id="siguiente" onclick="siguiente()">Siguiente</button>
     </div>
 </div>
     <footer>
@@ -69,14 +67,28 @@
 </div>
 <script type="text/javascript">
    let arreglo=[
-    ("recuros/imagen1"),
-    ("recursos/imgen2"),
-    ("recursos/imagen3"),
+    "recursos/imagen1.jpg",
+    "recursos/imagen2.jpg",
+    "recursos/imagen3.jpg",
 ];
-   let carrusel= document.getElementById("carrusel");
-   carrusel.style.backgroundImage= arreglo[2];
+   const carrusel= document.getElementById("fotos");
+   let cont=0;
+    carrusel.serc=arreglo[cont];
    
-
+    function siguiente(){
+    cont++;
+    if(cont===arreglo.length){
+        cont=0;
+    }
+    carrusel.src = arreglo[cont];
+}   
+    function atras(){
+    cont--;
+    if(cont=== -1){
+        cont=(arreglo.length)-1;
+    }
+    carrusel.src = arreglo[cont];
+}   
 </script>
 </body>
 </html>
