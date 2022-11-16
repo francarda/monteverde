@@ -25,13 +25,13 @@
 <div id="form1">
 <form id= "form" accion="formulario" method="post" onsubmit= "return validar()">
     <div class="delform">
-        <div>
+        <div id="first">
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name= "nombre" placeholder="Nombre"  />
             <br>
             
         </div>
-        <div>
+        <div id="second">
             <label for="apellido">Apellido</label>
             <input type="text" id="apellido" name = "apellido" placeholder="Apellido">
             <br>
@@ -40,10 +40,10 @@
     </div>
 <!---email, passwor, file, radio, checkbox, value es para pasar un valor por defecto-->
 <div class="delform">
-    <div><label for="ciudad">Ciudad</label>
+    <div ><label for="ciudad">Ciudad</label>
         <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad en la que se encuentra el terreno">
         <br></div>
-       <div>
+       <div class="second">
 
            <label for="email">E-mail</label>
            <input type="email" id="email" name="email" placeholder="Correo electronico"/>
@@ -76,7 +76,11 @@
         let email= document.getElementById("email");
         let comentario= document.getElementById("comentario");
         let patron = /^\w+@\w+(\.\w{2,4})+$/;
-       
+        let spans= document.querySelectorAll("span");
+        for(let i=0; i<spans.length;i++){
+            spans[i].innerHTML="";
+        }
+        ;
         let nodo= document.querySelectorAll("input");
         for (let i = 0; i < nodo.length; i++) {
        nodo[i].classList.remove("error");
@@ -89,11 +93,13 @@
         error.innerHTML="Debe ingresar un nombre";
         let list= nombre.classList;
         list.add("error");
+        flag=false;
         }
         if (apellido.value == ""){
-            let error= document.createElement("li");
-            errores.appendChild(error);
-            error.innerHTML="Debe ingresar un apellido";
+            let second = document.getElementById("second")
+            let spana= document.createElement("span");
+            second.appendChild(spana);
+            spana.innerHTML="Debe ingresar un apellido";
             flag=false;
             apellido.classList.add("error");
         }
@@ -120,14 +126,19 @@
             comentario.classList.add("error");
         }
         if (flag){
-        let hoala= document.getElementById("form1");
-        hoala.innerHTML="";
-        }
-        /*let mensaje = document.createElement("li");
+        let borrar= document.getElementById("form1");
+        borrar.innerHTML="";
+        
+        let mensaje = document.createElement("li");
+        
         errores.appendChild(mensaje);
-        mensaje.innerHTML="su mensaje ha sido enviado<br>Los datos enviados fueror<li>nombre:"*/
+        mensaje.innerHTML="SU MENSAJE HA SIDO ENVIADO CON LOS SIGUIENTES DATOS: <li>Nombre: "+nombre.value+"</li><li>Apellido: "+ apellido.value+"</li><li>Ciudad: "+
+            ciudad.value+ "</li><li> e-mail: "+email.value+"</li><li> Comentario:<br>"+comentario.value;
+       
+        }
     return false;
     }
+
 
 </script>
 
