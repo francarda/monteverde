@@ -7,7 +7,7 @@
 </head>
 
 
-<body>
+<body style="background-color: rgb(105, 234, 96); background-image: url('recursos/fondo.jpg'); background-size: cover;">
 <div class="encabezado distinto"> 
     
     <div class="bienvenidos">Contacto</div>
@@ -40,30 +40,37 @@
     </div>
 <!---email, passwor, file, radio, checkbox, value es para pasar un valor por defecto-->
 <div class="delform">
-    <div ><label for="ciudad">Ciudad</label>
-        <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad en la que se encuentra el terreno">
+    <div id="third">
+        <label for="ciudad">Ciudad</label>
+        <input type="text" id="ciudad" name="ciudad" placeholder="Del terreno">
         <br></div>
-       <div class="second">
+       <div id="fourth">
 
            <label for="email">E-mail</label>
            <input type="email" id="email" name="email" placeholder="Correo electronico"/>
            <br>
         </div>
    </div>
-   <div>
+   <div id= "fifth"class="comentario">
     
-    <label for="comentario">Comentario</label>
+    <label for="comentario">Comentario:</label>
     <textarea name="comentario" id="comentario" cols="50" rows="10"></textarea>
     <br>
 </div>
-    <input type="submit"/>
-    <!--buttom, submit reset, se puede agregar etiquetas-->
+<div  id="botones_form">
+
+    <button type="submit"> Enviar</button>
+  
     
     <button type="reset"> Limpar Formulario</button>
+</div> 
 </form>
 </div>
-<ul id="errores">
+
+    
+    <ul id="errores" class="lista_errores">
     </ul>
+
 <script type="text/javascript">
    function validar(){
         let flag=true;
@@ -91,15 +98,21 @@
         let error = document.createElement("li");
         errores.appendChild(error);
         error.innerHTML="Debe ingresar un nombre";
+        let spana= document.createElement("span");
+            document.getElementById("first").appendChild(spana);
+            spana.innerHTML="*Debe ingresar un nombre";
         let list= nombre.classList;
         list.add("error");
         flag=false;
         }
         if (apellido.value == ""){
             let second = document.getElementById("second")
+            let error = document.createElement("li");
+            errores.appendChild(error);
+            error.innerHTML="Debe ingresar un apellido";
             let spana= document.createElement("span");
             second.appendChild(spana);
-            spana.innerHTML="Debe ingresar un apellido";
+            spana.innerHTML="*Debe ingresar un apellido";
             flag=false;
             apellido.classList.add("error");
         }
@@ -109,6 +122,9 @@
             error.innerHTML= "Debe ingresar una ciudad";
             flag=false;
             ciudad.classList.add("error");
+            let spana= document.createElement("span");
+            document.getElementById("third").appendChild(spana);
+            spana.innerHTML="*Debe ingresar una ciudad";
         }
         if (!patron.test(email.value)){
             let error= document.createElement("li");
@@ -116,7 +132,9 @@
             error.innerHTML="Debe ingresar un e-mailvalido";
             flag=false;
             email.classList.add("error");
-
+            let spana= document.createElement("span");
+            document.getElementById("fourth").appendChild(spana);
+            spana.innerHTML="*Debe ingresar un e-mail valido";
         }
         if (comentario.value== ""){
             let error= document.createElement("li");
@@ -124,6 +142,9 @@
             error.innerHTML="Debe ingresar un comentario";
             flag=false;
             comentario.classList.add("error");
+            let spana= document.createElement("span");
+            document.getElementById("fifth").appendChild(spana);
+            spana.innerHTML="*Debe ingresar un comentario";
         }
         if (flag){
         let borrar= document.getElementById("form1");
@@ -134,7 +155,8 @@
         errores.appendChild(mensaje);
         mensaje.innerHTML="SU MENSAJE HA SIDO ENVIADO CON LOS SIGUIENTES DATOS: <li>Nombre: "+nombre.value+"</li><li>Apellido: "+ apellido.value+"</li><li>Ciudad: "+
             ciudad.value+ "</li><li> e-mail: "+email.value+"</li><li> Comentario:<br>"+comentario.value;
-       
+       errores.classList.add("lista_mensaje");
+    
         }
     return false;
     }

@@ -96,12 +96,6 @@ div > ul > li > a{
     color: black;
     opacity: 1,5;
     z-index: 12;
- 
-
-    /*position: absolute;
-
-  left:50%;
-    top:50%;*/
    justify-content: center;
     align-items: center;
     text-align: right; 
@@ -116,6 +110,10 @@ div > ul > li> a:hover{
     text-align: center;
 
     align-items: reverse;
+}
+input{
+    height: 20px;
+
 }
 div.cuerpo{
 
@@ -177,7 +175,7 @@ div.mision{
     width: 50%;
     height: 500px;
     background-color: white;
-    border: solid black;
+    border: solid rgb(2, 78, 2);
     /*background-image: url("recursos/imagen1.jpg");*/
 
 
@@ -199,8 +197,53 @@ div.txtContacto{
     background-color: rgba(255, 255, 255 , 0.4);
 
 }
+.lista_errores{
+   
+    margin-top: 20px;
+    color:#000;
+    font-size: 20px;
+    list-style: disc;
+
+
+}
+.lista_mensaje{
+    text-align: center;
+    margin-top: 30px;
+    color:#000;
+    font-size: 24px;
+    list-style: none;
+    font-family: 'Architects Daughter', "cursive";
+    background-color: rgba(255, 255, 255 , 0.4);
+}
+#botones_form button{
+    height: 40px;
+  font-size: 15px;
+font-family:'Architects Daughter', "cursive" ;
+color:green;
+}
+label{
+    font-family:'Architects Daughter', "cursive" ;
+}
 div.botones{
     align-self: center;
+}
+div.botones button{
+    height: 40px;
+    width: 200px;
+    color: blak;
+    background-color: rgb(175, 231, 175);
+    font-family: 'Architects Daughter', "cursive";
+    font-size: 20px;
+}
+div.botones button:hover {
+    transform: scale(1.1);
+    color:white;
+    background-color: darkgreen;
+    border: none;
+
+}
+div.botones button:active{
+    color:black;
 }
 /*.otro{
     width: 50%;
@@ -218,23 +261,33 @@ border: solid black;
 }
 
 form{
+    margin-top: 40px;
     position: relative;
     left: 10%;
     display: flex;
     margin: center;
     flex-direction: column;
     align-items:baseline;
-    background-color: burlywood;
+    background-color: rgba(239, 237, 234, 0.4);
+    
     width: 80%;
     margin-top: 40px;
-    color:rgba(0, 100, 0, 0.5);
+    color:rgb(0, 100, 0);
+   
     font-size: 20px;
+}
+div.comentario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    margin-left: 5%;
 }
 div.delform{
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin:1%;
 }
 .iconMenu{
     font-size: 26px;
