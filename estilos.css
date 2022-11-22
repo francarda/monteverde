@@ -139,6 +139,38 @@ div.derecha{
     background-size: cover;
     background-position: center;
 }
+.imagen2{
+    width: 400px;
+    height:250px;
+    margin-top: 20px;
+    
+    float: left;
+ 
+}
+.imgArt{
+    align-self: center;
+
+    width:80%;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+div.articulo{
+    
+    padding: 20px;
+    background-color: rgba(212, 243, 212, 0.767);
+}
+.parrafoArt{
+    
+    font-family: 'Architects Daughter', "cursive";
+    text-shadow: 0 0 5px white;
+    color: darkgreen;
+    padding: 20px;
+    font-size: 30px;
+    text-align: justify;
+    margin-left: 30px;
+    margin-top: 20px;
+    padding: 20px;
+}
 div.imagen_cuerpo{
     width: 30%;
     height: 100px;
@@ -255,13 +287,15 @@ border: solid black;
    
     width: auto;
     height: auto;
-    background-image: url("recursos/fondo pie.png");
+    background-image: url("recursos/fondo cesped.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+#form1{
+    padding-top: 20px;
+}
 form{
-    margin-top: 40px;
+    padding-top: 40px;
     position: relative;
     left: 10%;
     display: flex;
@@ -271,7 +305,7 @@ form{
     background-color: rgba(239, 237, 234, 0.4);
     
     width: 80%;
-    margin-top: 40px;
+    
     color:rgb(0, 100, 0);
    
     font-size: 20px;
