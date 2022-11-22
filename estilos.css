@@ -149,7 +149,7 @@ div.derecha{
 }
 .imgArt{
     align-self: center;
-
+  
     width:80%;
     padding-right: 10%;
     padding-left: 10%;
@@ -157,12 +157,12 @@ div.derecha{
 div.articulo{
     
     padding: 20px;
-    background-color: rgba(212, 243, 212, 0.767);
+    background-color: rgba(250,250,250, 0.5);
 }
 .parrafoArt{
     
     font-family: 'Architects Daughter', "cursive";
-    text-shadow: 0 0 5px white;
+    text-shadow: 0 0 20px white;
     color: darkgreen;
     padding: 20px;
     font-size: 30px;
@@ -195,10 +195,10 @@ div.mision{
     margin-top: 40px;
     padding: 40px;
     width: auto;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
 }
 .carrusel{
  
@@ -209,8 +209,8 @@ div.mision{
     background-color: white;
     border: solid rgb(2, 78, 2);
     /*background-image: url("recursos/imagen1.jpg");*/
-
-
+    border-radius: 40px;
+    box-shadow: 0 0 10px grey;
 }
  footer {
 
@@ -252,6 +252,7 @@ div.txtContacto{
   font-size: 15px;
 font-family:'Architects Daughter', "cursive" ;
 color:green;
+
 }
 label{
     font-family:'Architects Daughter', "cursive" ;
@@ -266,6 +267,8 @@ div.botones button{
     background-color: rgb(175, 231, 175);
     font-family: 'Architects Daughter', "cursive";
     font-size: 20px;
+    border-radius: 10px;
+box-shadow: 0 0 5px grey;
 }
 div.botones button:hover {
     transform: scale(1.1);
