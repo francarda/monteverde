@@ -9,8 +9,9 @@
 }
 span{
     color: red;
-    font-size: 12px;
+    font-size: 14px;
     align-self: flex-end;
+    text-shadow: 0 0 6px white;
 }
 div.encabezado{
     font-family: 'Architects Daughter', "cursive";
@@ -26,7 +27,7 @@ div.encabezado{
     width: auto;
   
     background-color: powderblue;
-    background-image: url("recursos/fonde recorte.png");
+    background-image: url("recursos/fonde recorte1.png");
     background-size: cover;
 }
 div.encabezado.distinto{
@@ -232,9 +233,11 @@ div.txtContacto{
 .lista_errores{
    
     margin-top: 20px;
-    color:#000;
+    color: red;
     font-size: 20px;
     list-style: disc;
+    text-shadow:0 0 10px white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 
 }
