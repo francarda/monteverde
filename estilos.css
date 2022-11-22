@@ -352,7 +352,7 @@ div.delform{
     /*background-color: red;
 */
 
-}
+}/*
 @media screen and (max-device-width:800px) {
     *{font-size: 24px;}
     #labelcheck{
@@ -417,9 +417,9 @@ div.txtContacto p{
         background-color: rgba(0, 100, 0, 0.5);
     }
 }
+*/
 
-
-@media screen and (max-width: 720px) 
+@media screen and ((max-width: 720px) or (max-device-width:800px))
 
 {
     div.encabezado{
@@ -427,14 +427,31 @@ div.txtContacto p{
     }
     img.hola{
         display: none;
-            }
-  div.botonera{
-    background-color: transparent;
-  }
+    }
+    div.mision{
+                margin-top: 40px;
+    }
+    .final{
+        width: 100%;
+    }
+    div.botonera{
+        padding:0px;
+        background-color: transparent;
+    }
+    
+    div.paracarru{
+        padding:0;
+        width:100%;
+    }
+    .carrusel{
+        width: 80%;
+    }
+  
     div.botonera > ul{
        flex-direction: column;
     margin: none;
     background: none;
+    padding: 0px;
     }
 div.cuerpo{
     justify-content: center;
@@ -442,6 +459,10 @@ div.cuerpo{
 }
 div.mision{
     width: 100%;
+}
+#form1{
+    padding-top:0px;
+    margin-top:60px;
 }
 footer {
     height: auto;
