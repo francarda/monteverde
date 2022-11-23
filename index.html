@@ -1,103 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <title>Monte Verde</title>
+    <head>
+        <title>Monte Verde</title>
 
-    <script src="https://kit.fontawesome.com/0ff1a97b5e.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/0ff1a97b5e.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href= "estilos.css">
-    <META CHARSET="UTF-8"></META>
+        <META CHARSET="UTF-8"></META>
 
-</head>
+    </head>
 
-<body>
-<div class="encabezado">  
-    <div class="bienvenidos">Bienvenidos</div>
-    
-    
-        
-</div>
-<!--hola-->
-<div class="botonera"> 
-    <ul>
-    <input type="checkbox" id="checkMenu">
-        <label for="checkMenu" id="labelcheck">
-            <i class="fa-solid fa-bars iconMenu"></i>
-
-        </label>
-    </input>
-        
-        <li><a href="#">home</a></li>
-        <li><a href="articulo.html">articulo</a></li>
-        <li><a href="#fotos">galeria de fotos</a></li>
-        <li><a href="form.html">contacto</a></li>
-    
-    </ul>
-</div>
-
-<div class="cuerpo">
-    <img class="hola" src="recursos/logo.jpg"/>
-
-
-
-    <div class="mision">
-        <p> Somos un empresa dedicada a ofrecerte todo lo necesario para que tu jardin luzca de la manera que tu lo imaginaste.
-        Nuestro objetivo es ayudarte a lograr tu espacio soñado y que este perdure en el tiempo.
-    </p></div>
-</div>
-<div class="final">
-<div class="paracarru">
-        <img id="fotos" class="carrusel" src="recursos/imagen1.jpg">
-    
-    <div class="botones">
-        <button id="atras" onclick="atras()">Atras</button>
-        <button type="button" id="siguiente" onclick="siguiente()">Siguiente</button>
-    </div>
-</div>
-    <footer>
-
-        <div class="otro"></div>
-        <div class="datos"></div>
-        <div class="txtContacto"> 
-            <p>Contactos:  <br> 
-              cel: 2664 167355<br>
-              email: monteverdejardineria@hotmail.com<br>
-             facebook: Monte Verde Jardineria</p>
+    <body>
+        <div class="encabezado">  
+            <div class="bienvenidos">Bienvenidos</div>     
         </div>
-    </footer>
-</div>
-<script type="text/javascript">
-   let arreglo=[
-   /* "recursos/imagen1.jpg",
-     "recursos/imagen2.jpg",
-    "recursos/imagen3.jpg",*/
-    "recursos/ima1.jpg",
-    "recursos/ima2.jpg",
-    "recursos/ima3.jpg",
-    "recursos/ima4.jpg",
-    "recursos/ima5.jpg",
-    "recursos/ima6.jpg",
-    "recursos/ima7.jpg",
-    
+        <div class="botonera"> 
+            <ul>
+                <input type="checkbox" id="checkMenu">
+                    <label for="checkMenu" id="labelcheck">
+                        <i class="fa-solid fa-bars iconMenu"></i>
 
-];
-   const carrusel= document.getElementById("fotos");
-   let cont=0;
-    carrusel.serc=arreglo[cont];
-   
-    function siguiente(){
-    cont++;
-    if(cont===arreglo.length){
-        cont=0;
-    }
-    carrusel.src = arreglo[cont];
-}   
-    function atras(){
-    cont--;
-    if(cont=== -1){
-        cont=(arreglo.length)-1;
-    }
-    carrusel.src = arreglo[cont];
-}   
-</script>
-</body>
+                    </label>
+                </input>
+                
+                <li><a href="#">home</a></li>
+                <li><a href="articulo.html">articulo</a></li>
+                <li><a href="#fotos">galeria de fotos</a></li>
+                <li><a href="form.html">contacto</a></li>
+            </ul>
+        </div>
+
+        <div class="cuerpo">
+            <img class="hola" src="recursos/logo.jpg"/>
+            
+            <div class="mision">
+                <p> Somos un empresa dedicada a ofrecerte todo lo necesario para que tu jardin luzca de la manera que tu lo imaginaste.
+                Nuestro objetivo es ayudarte a lograr tu espacio soñado y que este perdure en el tiempo.
+                </p>
+            </div>
+        </div>
+        <div class="final">
+            <div class="paracarru">
+                <img id="fotos" class="carrusel" src="recursos/imagen1.jpg">
+            
+                <div class="botones">
+                    <button id="atras" onclick="atras()">Atras</button>
+                    <button type="button" id="siguiente" onclick="siguiente()">Siguiente</button>
+                </div>
+            </div>
+            <footer>
+                <div class="otro"></div>
+                <div class="datos"></div>
+                <div class="txtContacto"> 
+                    <p>Contactos:  <br> 
+                        cel: 2664 167355<br>
+                        email: monteverdejardineria@hotmail.com<br>
+                        facebook: Monte Verde Jardineria
+                    </p>
+                </div>
+            </footer>
+        </div>
+        
+        <script type="text/javascript">
+        let arreglo=[
+        /* "recursos/imagen1.jpg",
+            "recursos/imagen2.jpg",
+            "recursos/imagen3.jpg",*/
+            "recursos/ima1.jpg",
+            "recursos/ima2.jpg",
+            "recursos/ima3.jpg",
+            "recursos/ima4.jpg",
+            "recursos/ima5.jpg",
+            "recursos/ima6.jpg",
+            "recursos/ima7.jpg",
+            
+
+        ];
+        const carrusel= document.getElementById("fotos");
+        let cont=0;
+            carrusel.serc=arreglo[cont];
+        
+            function siguiente(){
+            cont++;
+            if(cont===arreglo.length){
+                cont=0;
+            }
+            carrusel.src = arreglo[cont];
+        }   
+            function atras(){
+            cont--;
+            if(cont=== -1){
+                cont=(arreglo.length)-1;
+            }
+            carrusel.src = arreglo[cont];
+        }   
+        </script>
+    </body>
 </html>
