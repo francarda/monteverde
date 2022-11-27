@@ -150,11 +150,26 @@
             borrar.innerHTML="";
             
             let mensaje = document.createElement("li");
-            
+            let mensaNombre= document.createElement("li");
+            let mensaApellido= document.createElement("li");
+            let mensaCiudad= document.createElement("li");
+            let mensaEmail= document.createElement("li");
+            let mensaComentario= document.createElement("li");
             errores.appendChild(mensaje);
-            mensaje.innerHTML="SU MENSAJE HA SIDO ENVIADO CON LOS SIGUIENTES DATOS: <li>Nombre: "+nombre.value+"</li><li>Apellido: "+ apellido.value+"</li><li>Ciudad: "+
-                ciudad.value+ "</li><li> e-mail: "+email.value+"</li><li> Comentario:<br>"+comentario.value;
-        errores.classList.add("lista_mensaje");
+            mensaje.innerHTML="SU MENSAJE HA SIDO ENVIADO CON LOS SIGUIENTES DATOS: ";
+            errores.appendChild(mensaNombre);
+            mensaNombre.innerHTML="Nombre: " + nombre.value;
+            errores.appendChild(mensaApellido);
+            mensaApellido.innerHTML="Apellido: "+ apellido.value;
+            errores.appendChild(mensaCiudad);
+            mensaCiudad.innerHTML="Ciudad: "+ ciudad.value;
+            errores.appendChild(mensaEmail);
+            mensaEmail.innerHTML="E-mail. "+ email.value;
+            errores.appendChild(mensaComentario);
+            mensaComentario.innerHTML="Comentario: "+ comentario.value;
+        
+            errores.classList.add("lista_mensaje");
+
         
             }
         return false;
